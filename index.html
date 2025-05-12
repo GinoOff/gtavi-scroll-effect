@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>GTA VI Scrolle Effect | Made By GinoOff</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<section class="hero">
+    <div class="hero-img-container">
+        <img src="assets/media/background.jpg" alt="hero">
+
+        <div class="hero-img-logo">
+            <img src="assets/media/template.webp" alt="logo">
+        </div>
+
+        <div class="hero-img-copy">
+            <p>Scorri per proseguire</p>
+        </div>
+    </div>
+
+    <div class="fade-overlay"></div>
+    <div class="overlay">
+        <svg width="100%" height="100%">
+            <defs>
+                <mask id="logoRevealMask">
+                    <rect width="100%" height="100%" fill="white"></rect>
+                    <path id="logoMask"></path>
+                </mask>
+            </defs>
+            <rect width="100%" height="100%" fill="#111117" mask="url(#logoRevealMask)"></rect>
+        </svg>
+    </div>
+
+    <div class="logo-container">
+        <div class="overlay-copy">
+            <h1>
+                Animazione <br>
+                By GinoOff
+            </h1>
+        </div>
+    </div>
+</section>
+<section class="outro">
+    <p>Se vedi questo è tutto andato a buon fine</p>
+</section>
+
+<script src="assets/logo/logo.js"></script>
+<script src="assets/script/script.js"></script>
+</body>
+</html>
