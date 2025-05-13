@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const svgOverlay = document.querySelector(".overlay");
     const overlayCopy = document.querySelector("h1");
 
-    const initialOverlayScale = 350;
+    const initialOverlayScale = 684;
     const logoContainer = document.querySelector(".logo-container");
     const logoMask = document.getElementById("logoMask");
 
