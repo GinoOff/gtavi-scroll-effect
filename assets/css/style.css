@@ -149,11 +149,6 @@ section {
         font-size: 3rem;
         letter-spacing: -0.1rem;
     }
-
-    .logo-container {
-        width: 160px;
-        height: 120px;
-    }
 }
 
 @media (max-width: 768px) {
@@ -164,12 +159,6 @@ section {
 
     p {
         font-size: 0.9rem;
-    }
-
-    .logo-container {
-        width: 140px;
-        height: 105px;
-        top: 22%;
     }
 
     .overlay-copy {
@@ -188,12 +177,6 @@ section {
         width: 50%;
     }
 
-    .logo-container {
-        width: 120px;
-        height: 90px;
-        top: 20%;
-    }
-
     .overlay-copy {
         bottom: 15%;
     }
@@ -206,11 +189,6 @@ section {
 @media (max-width: 360px) {
     h1 {
         font-size: 1.75rem;
-    }
-
-    .logo-container {
-        width: 100px;
-        height: 75px;
     }
 
     .hero-img-logo {
