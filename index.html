@@ -2,8 +2,17 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>GTA VI Scrolle Effect | Made By GinoOff</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTA VI Scroll Effect | Made By GinoOff</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        @media (prefers-reduced-motion: reduce) {
+            .hero-img-container, .overlay, .overlay-copy h1 {
+                transition: none !important;
+                animation: none !important;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -15,7 +24,7 @@
             <img src="assets/logo/logo.png" alt="logo">
         </div>
 
-        <img src="assets/media/template.webp" alt="">
+        <img src="assets/media/template.webp" alt="template">
 
         <div class="hero-img-copy">
             <p>Scorri per proseguire</p>
@@ -24,7 +33,7 @@
 
     <div class="fade-overlay"></div>
     <div class="overlay">
-        <svg width="100%" height="100%">
+        <svg width="100%" height="100%" aria-hidden="true">
             <defs>
                 <mask id="logoRevealMask">
                     <rect width="100%" height="100%" fill="white"></rect>
@@ -35,7 +44,7 @@
         </svg>
     </div>
 
-    <div class="logo-container"></div>
+    <div class="logo-container" aria-hidden="true"></div>
 
     <div class="overlay-copy">
         <h1>

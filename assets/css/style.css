@@ -1,46 +1,48 @@
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     background: #111117;
     color: #fff;
     overflow-x: hidden;
+    font-family: Arial, sans-serif;
 }
 
-img{
+img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-h1{
+h1 {
     text-transform: uppercase;
-    font-size: 6rem;
+    font-size: clamp(2rem, 6vw, 6rem);
     font-weight: 700;
-    letter-spacing: -0.2rem;
-    line-height: .8;
+    letter-spacing: clamp(-0.1rem, -0.2vw, -0.2rem);
+    line-height: 0.8;
 }
 
-p{
+p {
     text-transform: uppercase;
-    font-size: 1.25rem;
+    font-size: clamp(0.75rem, 1.5vw, 1.25rem);
     font-weight: 500;
-    line-height: .8;
+    line-height: 1;
 }
 
-section{
+section {
     position: relative;
-    width: 100vw;
+    width: 100%;
     height: 100svh;
     background: #111117;
     text-align: center;
     overflow: hidden;
 }
 
-.hero-img-container, .hero-img-container img, .fade-overlay{
+.hero-img-container, .hero-img-container img, .fade-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -48,30 +50,36 @@ section{
     height: 100%;
 }
 
-.hero-img-logo img{
+.hero-img-logo {
     position: absolute;
-    top: 20%;
+    top: min(20%, 300px);
     left: 50%;
     transform: translate(-50%, 0);
-    width: 250px;
+    width: min(60%, 350px);
     height: auto;
+}
+
+.hero-img-logo img {
     object-fit: contain;
+    width: 100%;
+    height: auto;
 }
 
 .hero-img-copy {
     position: absolute;
-    bottom: 20%;
+    bottom: min(20%, 100px);
     left: 50%;
     transform: translate(-50%, 0);
     will-change: opacity;
 }
 
 .hero-img-copy p {
-    font-size: .65rem;
+    font-size: clamp(0.65rem, 1vw, 0.85rem);
 }
 
 .fade-overlay {
     background: #fff;
+    opacity: 0;
     will-change: opacity;
 }
 
@@ -90,17 +98,18 @@ section{
     top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 200px;
-    height: 150px;
+    width: clamp(120px, 25vw, 200px);
+    height: clamp(90px, 18.75vw, 150px);
     z-index: 2;
 }
 
 .overlay-copy {
     position: absolute;
-    bottom: 25%;
+    bottom: clamp(15%, 20vw, 25%);
     left: 50%;
     transform: translate(-50%, 0%);
     z-index: 2;
+    width: min(90%, 800px);
 }
 
 .overlay-copy h1 {
@@ -111,23 +120,141 @@ section{
     transform-origin: center 0%;
 }
 
-.outro{
+.outro {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-@media(max-width: 900px){
-    h1{
-        font-size: 2.5rem;
-        letter-spacing: 0;
+/* Responsive breakpoints */
+@media (max-width: 1440px) {
+    .overlay-copy h1 {
+        font-size: 5rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .overlay-copy h1 {
+        font-size: 4rem;
     }
 
-    p{
-        font-size: 1rem;
+    .logo-container {
+        width: 180px;
+        height: 135px;
+    }
+}
+
+@media (max-width: 900px) {
+    .overlay-copy h1 {
+        font-size: 3rem;
+        letter-spacing: -0.1rem;
+    }
+
+    .logo-container {
+        width: 160px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+        letter-spacing: -0.05rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .logo-container {
+        width: 140px;
+        height: 105px;
+        top: 22%;
     }
 
     .overlay-copy {
-        width: 100%;
+        bottom: 20%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+        letter-spacing: 0;
+    }
+
+    .hero-img-logo {
+        top: 15%;
+        width: 50%;
+    }
+
+    .logo-container {
+        width: 120px;
+        height: 90px;
+        top: 20%;
+    }
+
+    .overlay-copy {
+        bottom: 15%;
+    }
+
+    .hero-img-copy {
+        bottom: 15%;
+    }
+}
+
+@media (max-width: 360px) {
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    .logo-container {
+        width: 100px;
+        height: 75px;
+    }
+
+    .hero-img-logo {
+        width: 45%;
+    }
+}
+
+/* For large screens */
+@media (min-width: 2560px) {
+    h1 {
+        font-size: 8rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+
+    .logo-container {
+        width: 300px;
+        height: 225px;
+    }
+
+    .hero-img-logo {
+        width: 400px;
+        top: min(20%, 400px);
+    }
+}
+
+/* For extra-large screens (8K) */
+@media (min-width: 7680px) {
+    h1 {
+        font-size: 16rem;
+    }
+
+    p {
+        font-size: 3rem;
+    }
+
+    .logo-container {
+        width: 600px;
+        height: 450px;
+    }
+
+    .hero-img-logo {
+        width: 800px;
     }
 }
